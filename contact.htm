@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Contact Us</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link rel="shortcut icon" type="image/jpg" href="/images/news2.png" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="contactInfo">
+                <div>
+                    <h2>Contact Info</h2>
+                    <ul class="info">
+                        <li>
+                            <span><i class="bi bi-map"></i></span>
+                            <span>Parashurampur Sarnath Varanasi<br>
+                                221007</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span><i class="bi bi-envelope"></i></span>
+
+                            <span><a href="mailto: am1145cse@gmail.com">am1145cse@gmail.com</a></span>
+                        </li>
+                        <li>
+                            <span><i class="bi bi-telephone"></i></span>
+                            <span>638-926-9540<br>935-699-1056</span>
+                        </li>
+
+                    </ul>
+                </div>
+                <ul class="sci">
+                    <li><a href="https://twitter.com/ankit114779?t=ct9SFBcwPeSSkxGBBQRQmQ&s=35" target="_blank"><i
+                                class="bi bi-twitter"></i></a>
+                    </li>
+                    <li><a href="https://instagram.com/ankit.maurya112?igshid=MzNlNGNkZWQ4Mg==" target="_blank"><i
+                                class="bi bi-instagram"></i></a>
+                    </li>
+                    <li> <a href="https://www.linkedin.com/in/ankit-maurya-b2108a230" target="_blank"><i class="bi bi-linkedin" ></i></a>
+                    </li>
+                    <li> <a href="https://github.com/am-1145" target="_blank"><i class="bi bi-github"></i></a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="contactForm">
+                <h2>Send a Message</h2>
+                <div class="formBox">
+                    <form onsubmit="sendEmail();reset();return false;">
+                    <div class="inputBox w50" id="FirstName" >
+                        <input type="text" name="" required>
+                        <span>First Name</span>
+                    </div>
+                    <div class="inputBox w50" id="LastName">
+                        <input type="text" required >
+                        <span>Last Name</span>
+                    </div>
+                    <div class="inputBox w50" id="email">
+                        <input type="email" required>
+                        <span>Email Address</span>
+                    </div>
+                    <div class="inputBox w50" id="Phone:">
+                        <input type="text" required>
+                        <span>Mobile Number</span>
+                    </div>
+                    <div class="inputBox w100" id="info">
+                        <textarea required></textarea>
+                        <span>Write your message here...</span>
+                    </div>
+                    <div class="inputBox w100">
+                        <input type="submit" value="Send">
+                    </div>
+                </form>
+                </div>
+            </div>
+
+
+
+    </section>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+        Email.send({
+    Host : "am1295101@gmail.com",
+    Username : "Ankit123@",
+    Password : "password",
+    To : 'ankitmini1145@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "New Enquiry",
+    Body : "First Name: "+document.getElementById("FirstName").value+
+            "<br>Last Name "+document.getElementById("LastName").value+
+            "<br>Email : "+document.getElementById("email").value+
+            "<br>Phone : "+document.getElementById("Phone:").value+
+            "<br>Message : "+document.getElementById("info").value
+}).then(
+  message => alert("success")
+);
+}
+    </script>
+</body>
+
+</html>
